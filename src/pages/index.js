@@ -11,6 +11,14 @@ import thumb03 from '../assets/images/thumbs/03.jpg'
 import thumb04 from '../assets/images/thumbs/04.jpg'
 import thumb05 from '../assets/images/thumbs/05.jpg'
 import thumb06 from '../assets/images/thumbs/06.jpg'
+import leftarrow from '../assets/images/buttons/left.png'
+import rightarrow from '../assets/images/buttons/right.png'
+import liquibase from '../assets/images/Logos/liquibase.png'
+import spring from '../assets/images/Logos/spring-by-pivotal.png'
+import jsonApi from '../assets/images/Logos/jsonapi.png'
+import mean from '../assets/images/Logos/mean.png'
+
+
 
 import full01 from '../assets/images/fulls/01.jpg'
 import full02 from '../assets/images/fulls/02.jpg'
@@ -20,12 +28,12 @@ import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
 const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: ' ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', src: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', src: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', src: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', src: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
+    { id: '1', thumbnail: thumb01, caption: 'Photo 1', description: ' ipsum dolor sit amet nisl sed nullam feugiat.'},
+    { id: '2', thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+    { id: '3', thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+    { id: '4', thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+    { id: '5', thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
+    { id: '6', thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
 ];
 
 class HomeIndex extends React.Component {
@@ -89,24 +97,64 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
+                            <intro>
+                            <h2>Who the heck is <rhymes1>Sam Zhou </rhymes1>?</h2>
+                            Well he's someone I'd like you to <rhymes1>Know</rhymes1> <br />
+                            Although you wouldn't take him out to <rhymes2>Dinner</rhymes2><br />
+                            Here's hoping you will still find him a <rhymes2>Winner</rhymes2><br />
+                            </intro>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+
+
+                        <p>
+                            Where would you like to start?
+                        </p>
                         <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
+                            <li><a href="#two" className="button">Learn More</a></li>
                         </ul>
                     </section>
 
                     <section id="two">
-                        <h2>Recent Work</h2>
+                        <header className="major">
+                            <h2>Co-op as Java Developer (taking the red pill)</h2>
+                            Things I've Learnt:
+                        </header>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
-                            src,
-                            thumbnail,
-                            caption,
-                            description
-                        }))} />
+                        <div class = "carousel">
+                            <button class="carousel__button carousel__button--left">
+                                <img src={leftarrow} alt=""/>
+                            </button>
+                            <div class="carousel__track-container">
+                            <ul class="carousel__track">
+                                <li class="carousel__slide">
+                                    <img src={liquibase} alt =""/>
+                                    <p class = "carousel__textblock">cool thinks</p>
+                                </li>
+                                <li className="carousel__slide">
+                                    <img src={spring} alt=""/>
+                                </li>
+                                <li className="carousel__slide">
+                                    <img src={jsonApi} alt=""/>
+                                </li>
+                                <li className="carousel__slide">
+                                    <img src={mean} alt=""/>
+                                </li>
+                            </ul>
+
+                            </div>
+                            <button className="carousel__button carousel__button--right">
+                                <img src={rightarrow} alt=""/>
+                            </button>
+
+                            <div class="carousel__nav">
+                                <button class="carousel__indicator current-slide"></button>
+                                <button className="carousel__indicator"></button>
+                                <button className="carousel__indicator"></button>
+
+                            </div>
+
+                        </div>
+
 
                         <ul className="actions">
                             <li><a href="#" className="button">Full Portfolio</a></li>

@@ -40,7 +40,7 @@
 		)
 	));
 
-	$size-header-width: 35%;
+	$size-header-width: 30%;
 	$size-header-pad: 4em;
 
 /* Basic */
@@ -100,7 +100,14 @@
 			color: inherit;
 			text-decoration: none;
 		}
+
+
 	}
+
+
+
+
+
 
 	h1 {
 		font-size: 2em;
@@ -108,7 +115,7 @@
 	}
 
 	h2 {
-		font-size: 1.5em;
+		font-size: 1em;
 		line-height: 1.5em;
 	}
 
@@ -205,9 +212,11 @@
 		&.special {
 			text-align: center;
 		}
+
 	}
 
 	header {
+
 		p {
 			color: _palette(fg-light);
 			position: relative;
@@ -235,10 +244,25 @@
 		}
 
 		&.major {
+
+			margin-bottom: (_size(element-margin) * .5);
 			h2 {
 				font-size: 2em;
 			}
+			rhymes1 {
+				color: mediumvioletred;
+				font-weight: bolder;
+			}
+
+			rhymes2 {
+				color: rebeccapurple;
+				font-weight: bolder;
+			}
+
 		}
+
+
+
 	}
 
 /* Form */
@@ -450,43 +474,8 @@
 		display: inline-block;
 		position: relative;
 
-		&:before {
-			@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
-			background: url('images/overlay.png');
-			border-radius: _size(border-radius);
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 0.5;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-
 		&.thumb {
 			text-align: center;
-
-			&:after {
-				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
-				border-radius: _size(border-radius);
-				border: solid 3px rgba(255,255,255,0.5);
-				color: #fff;
-				content: 'View';
-				display: inline-block;
-				font-size: 0.8em;
-				font-weight: _font(weight-bold);
-				left: 50%;
-				line-height: 2.25em;
-				margin: -1.25em 0 0 -3em;
-				opacity: 0;
-				padding: 0 1.5em;
-				position: absolute;
-				text-align: center;
-				text-decoration: none;
-				top: 50%;
-				white-space: nowrap;
-			}
 
 			&:hover {
 				&:after {
@@ -1003,6 +992,90 @@
 				margin-top: 0;
 				padding-top: 0;
 			}
+		}
+		.carousel{
+			position: relative;
+			width: 80%;
+			margin: 0 auto;
+
+		}
+
+		.carousel__track-container{
+			background: #49bf9d;
+			padding: 5em;
+			height: 100%;
+			width: 100%;
+			position: center;
+			margin-bottom: 2em;
+		}
+
+		.carousel__track{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+
+		.carousel__slide{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 80%;
+			height: 80%;
+			img{
+				position: center;
+				width:  100%;
+				height: 100%;
+				object-fit: contain;
+			}
+			.carousel__textblock{
+				text-align: center;
+				width: 15em;
+				margin-bottom: 2em;
+
+			}
+		}
+
+		.carousel__button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: transparent;
+			border: 0;
+			cursor: pointer;
+		}
+
+		.carousel__button--right{
+			left: 100%;
+
+		}
+		.carousel__button--left{
+			right: 100%;
+
+		}
+
+		.carousel__button img {
+			width: 2.5em;
+		}
+
+		.carousel__nav{
+			background: pink;
+			display: flex;
+			justify-content: center;
+			padding: .5em 0;
+		}
+
+		.carousel__indicator{
+			border: 0;
+			border-radius: 50%;
+			width: .5em;
+			height: 1em;
+			background: grey;
+			margin: .5em;
+		}
+
+		.carousel__indicator.current-slide {
+			background: black;
 		}
 	}
 
