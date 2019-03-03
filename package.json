@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Sam Zhou <samzhoucontact@gmail.com>",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "gatsby": "^2.0.76",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.16",
@@ -11,6 +12,7 @@
     "gatsby-plugin-sass": "^2.0.7",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
+    "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-images": "^0.5.19"

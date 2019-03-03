@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
+import Carousel from 'react-bootstrap/Carousel'
+
 
 import thumb01 from '../assets/images/thumbs/01.jpg'
 import thumb02 from '../assets/images/thumbs/02.jpg'
@@ -11,12 +13,10 @@ import thumb03 from '../assets/images/thumbs/03.jpg'
 import thumb04 from '../assets/images/thumbs/04.jpg'
 import thumb05 from '../assets/images/thumbs/05.jpg'
 import thumb06 from '../assets/images/thumbs/06.jpg'
-import leftarrow from '../assets/images/buttons/left.png'
-import rightarrow from '../assets/images/buttons/right.png'
-import liquibase from '../assets/images/Logos/liquibase.png'
+import gatsby from '../assets/images/Logos/gatsby.jpg'
 import spring from '../assets/images/Logos/spring-by-pivotal.png'
 import jsonApi from '../assets/images/Logos/jsonapi.png'
-import mean from '../assets/images/Logos/mean.png'
+import angular from '../assets/images/Logos/angular.png'
 
 
 
@@ -97,12 +97,10 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <intro>
-                            <h2>Who the heck is <rhymes1>Sam Zhou </rhymes1>?</h2>
-                            Well he's someone I'd like you to <rhymes1>Know</rhymes1> <br />
-                            Although you wouldn't take him out to <rhymes2>Dinner</rhymes2><br />
-                            Here's hoping you will still find him a <rhymes2>Winner</rhymes2><br />
-                            </intro>
+                            <h2>Who the heck is <b className="rhymes1">Sam Zhou </b>?</h2>
+                            Well he's someone I'd like you to <b className="rhymes1">Know</b> <br />
+                            Although you wouldn't take him out to <b className="rhymes2">Dinner</b><br />
+                            Here's hoping you will still find him a <b className="rhymes2">Winner</b><br />
                         </header>
 
 
@@ -116,48 +114,57 @@ class HomeIndex extends React.Component {
 
                     <section id="two">
                         <header className="major">
-                            <h2>Co-op as Java Developer (taking the red pill)</h2>
-                            Things I've Learnt:
+                            <h2>Here are some of the frameworks I've worked with</h2>
                         </header>
+                    <div className="carousel_holder">
+                        <Carousel>
 
-                        <div class = "carousel">
-                            <button class="carousel__button carousel__button--left">
-                                <img src={leftarrow} alt=""/>
-                            </button>
-                            <div class="carousel__track-container">
-                            <ul class="carousel__track">
-                                <li class="carousel__slide">
-                                    <img src={liquibase} alt =""/>
-                                    <p class = "carousel__textblock">cool thinks</p>
-                                </li>
-                                <li className="carousel__slide">
-                                    <img src={spring} alt=""/>
-                                </li>
-                                <li className="carousel__slide">
-                                    <img src={jsonApi} alt=""/>
-                                </li>
-                                <li className="carousel__slide">
-                                    <img src={mean} alt=""/>
-                                </li>
-                            </ul>
+                                <Carousel.Item>
+                                    <a href="https://spring.io/" target="_blank" rel="noopener noreferrer">
+                                    <img className="d-block w-100 " src={spring} alt="Java Spring Click for link"/>
+                                    </a>
+                                    <Carousel.Caption>
+                                        <h2>A Java MVC Framework</h2>
+                                    </Carousel.Caption>
 
-                            </div>
-                            <button className="carousel__button carousel__button--right">
-                                <img src={rightarrow} alt=""/>
-                            </button>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
+                                    <img className="d-block w-100" src={gatsby} alt="GatsbyJs"/>
+                                    </a>
+                                    <Carousel.Caption>
+                                        <h2>A React framework that built this site!</h2>
+                                    </Carousel.Caption>
 
-                            <div class="carousel__nav">
-                                <button class="carousel__indicator current-slide"></button>
-                                <button className="carousel__indicator"></button>
-                                <button className="carousel__indicator"></button>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                <a href="https://jsonapi.org/" target="_blank" rel="noopener noreferrer">
+                                    <img className="d-block w-100" src={jsonApi} alt="jsonApi"/>
+                                </a>
+                                <Carousel.Caption>
+                                    <h2>A standard for building API services</h2>
+                                </Carousel.Caption>
+                                </Carousel.Item>
+                            <Carousel.Item>
+                                <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">
+                                    <img className="d-block w-100" src={angular} alt="angular"/>
+                                </a>
+                                <Carousel.Caption>
+                                    <h2>A Javascript front end framework</h2>
+                                </Carousel.Caption>
 
-                            </div>
+                            </Carousel.Item>
 
-                        </div>
+
+
+
+                        </Carousel>
+                    </div>
+
 
 
                         <ul className="actions">
-                            <li><a href="#" className="button">Full Portfolio</a></li>
+                            <li><a href="#three" className="button">Full Portfolio</a></li>
                         </ul>
                     </section>
 

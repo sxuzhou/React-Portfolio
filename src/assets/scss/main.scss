@@ -249,12 +249,12 @@
 			h2 {
 				font-size: 2em;
 			}
-			rhymes1 {
+			.rhymes1 {
 				color: mediumvioletred;
 				font-weight: bolder;
 			}
 
-			rhymes2 {
+			.rhymes2 {
 				color: rebeccapurple;
 				font-weight: bolder;
 			}
@@ -993,89 +993,55 @@
 				padding-top: 0;
 			}
 		}
-		.carousel{
-			position: relative;
-			width: 80%;
-			margin: 0 auto;
-
-		}
-
-		.carousel__track-container{
-			background: #49bf9d;
-			padding: 5em;
-			height: 100%;
-			width: 100%;
+		.carousel_holder {
 			position: center;
-			margin-bottom: 2em;
-		}
-
-		.carousel__track{
-			padding: 0;
-			margin: 0;
-			list-style: none;
-		}
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			text-align:center;
 
 
-		.carousel__slide{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 80%;
-			height: 80%;
+			.carousel-caption {
+				max-width: 100%;
+				width: 100%;
+				left: 0;
+				position: relative;
+				align-self: center;
+				margin-bottom: 2em;
+				bottom: 20%;
+
+
+				p{
+					color: black;
+					transform: translateY(-50%);
+					align-content: normal;
+
+				}
+			}
+
+			.carousel-control-next-icon{
+				filter: invert(100%);
+			}
+			.carousel-control-prev-icon{
+				filter: invert(100%);
+			}
+
+			.carousel-indicators li{
+				background-color: black;
+			}
+
+			.carousel-inner{
+
+				object-fit: cover;
+
+			}
 			img{
 				position: center;
-				width:  100%;
-				height: 100%;
+				height: 15em;
+				width: 20em;
 				object-fit: contain;
 			}
-			.carousel__textblock{
-				text-align: center;
-				width: 15em;
-				margin-bottom: 2em;
 
-			}
-		}
-
-		.carousel__button {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			background: transparent;
-			border: 0;
-			cursor: pointer;
-		}
-
-		.carousel__button--right{
-			left: 100%;
-
-		}
-		.carousel__button--left{
-			right: 100%;
-
-		}
-
-		.carousel__button img {
-			width: 2.5em;
-		}
-
-		.carousel__nav{
-			background: pink;
-			display: flex;
-			justify-content: center;
-			padding: .5em 0;
-		}
-
-		.carousel__indicator{
-			border: 0;
-			border-radius: 50%;
-			width: .5em;
-			height: 1em;
-			background: grey;
-			margin: .5em;
-		}
-
-		.carousel__indicator.current-slide {
-			background: black;
 		}
 	}
 
