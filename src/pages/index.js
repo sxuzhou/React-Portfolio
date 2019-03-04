@@ -2,17 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
-// import Lightbox from 'react-images'
-import Gallery from '../components/Gallery'
 import Carousel from 'react-bootstrap/Carousel'
 
-
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
 import gatsby from '../assets/images/Logos/gatsby.jpg'
 import spring from '../assets/images/Logos/spring-by-pivotal.png'
 import jsonApi from '../assets/images/Logos/jsonapi.png'
@@ -20,21 +11,6 @@ import angular from '../assets/images/Logos/angular.png'
 
 
 
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
-
-const DEFAULT_IMAGES = [
-    { id: '1', thumbnail: thumb01, caption: 'Photo 1', description: ' ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
-];
 
 class HomeIndex extends React.Component {
 
@@ -83,8 +59,8 @@ class HomeIndex extends React.Component {
     }
 
     render() {
-        const siteTitle = "Sam's Portfolio"
-        const siteDescription = "showcasing the goods"
+        const siteTitle = "Sam's Portfolio";
+        const siteDescription = "showcasing the goods";
 
         return (
             <Layout>
@@ -177,7 +153,7 @@ class HomeIndex extends React.Component {
                                     <div className="row uniform 50%">
                                         <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
                                         <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"/></div>
                                     </div>
                                 </form>
                                 <ul className="actions">
