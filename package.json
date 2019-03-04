@@ -1,5 +1,5 @@
 {
-  "name": "A programmer's portfolio",
+  "name": "a-programmers-portfolio",
   "description": "Playing around with a Gatsby Starter to create something useful",
   "version": "1.0.0",
   "author": "Sam Zhou <samzhoucontact@gmail.com>",
@@ -25,7 +25,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
     "prettier": "^1.14.2"
